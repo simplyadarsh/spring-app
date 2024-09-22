@@ -4,10 +4,9 @@ package com.adarsh;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.stereotype.Controller;
 
 @SpringBootApplication
-@RestController
 public class SpringApp {
 
     public static void main(String[] args) {
@@ -15,7 +14,7 @@ public class SpringApp {
     }
 
     @GetMapping("/")
-    public String displayMessage() {
-        return "This is a simple Spring Boot project";
+    public String index() {
+        return "index";
     }
 }
